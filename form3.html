@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+</head>
+<style>
+    form {
+        background-color: orange;
+        color: black;
+        padding: 5px;
+    }
+
+    div {
+
+        padding: 5px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div onsubmit="return validateForm()" method="post">
+            <h1>Student Registration Form</h1>
+
+            <div>
+                <b><label for="fname">First name:</label></b>
+                <input type="text" id="fname" name="first name" placeholder="Enter your first name" required>
+            </div>
+
+            <div>
+                <b><label for="email">Email address:</label></b>
+                <input type="email" id="email" name="email address" placeholder="Enter your email" autocomplete/>
+            </div>
+            <div>
+                <b><label for="bdate">Date of Birth:</label></b>
+                <input type="date" id="bdate" name="date of birth"/>
+            </div>
+            <div>
+                <b><label for="username">Set Username:</label></b>
+                <input type="text" id="uesrname" name="setusername" placeholder="Set Username" required/>
+            </div>
+            <div>
+                <b><label for="password">Set Password:</label></b>
+                <input type="password" id="password" name="password" placeholder="Set password" maxlength="10"/>
+            </div>
+            <div>
+                <b><label for="age">Age:</label></b>
+                <input type="number" id="age" name="age" max="30" min="10"/>
+            </div>
+
+            <div>
+                <b><label for="zip code">Zip Code:</label></b>
+                <input type="tel" id="zipcode" name="Zip Code" maxlength="6"/>
+            </div>
+            <div>
+                <b><label for="address">Address:</label></b>
+                <textarea cols="20" rows="2" id="address"></textarea>
+            </div>
+            <div>
+                <b><label for="city">City:</label></b>
+                <select id="city">
+                    <option value="Rajkot">Rajkot</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Morbi">Morbi</option>
+                </select>
+            </div>
+
+            <div>
+                <b><label for="course">Course:</label></b>
+                <select id="course">
+                    <option value="bcom">BCOM</option>
+                    <option value="bca">BCA</option>
+                    <option value="bba">BBA</option>
+                </select>
+            </div>
+            <b><div class="row"></b>
+                <input type="submit" value="Submit" onclick="validateForm()"/>
+            </div>
+        </div>
+    </div>
+        <table border>
+            <thead>
+                <th>First Name</th>
+                <th>Email </th>
+                <th>Date Of Birth </th>
+                <th>Set Username</th>
+                <th>Set Password</th>
+                <th>Age</th>
+                <th>Zip Code</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Course</th>
+            </thead>
+            <tbody id="tablebody2"></tbody>
+        </table >
+    
+
+    <script src="style3.js"></script>
+</body>
+
+</html>
